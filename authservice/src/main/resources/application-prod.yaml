@@ -1,0 +1,18 @@
+ACTIVE_PROFILE: prod
+
+PRIVATE_KEY: "private.key"
+PUBLIC_KEY: "public.key"
+
+POSTGRES_USERNAME: "user"
+POSTGRES_PASSWORD: "letmein"
+POSTGRES_HOST: "localhost"
+POSTGRES_PORT: "5432"
+POSTGRES_DATABASE: "localdb"
+
+EUREKA_HOST: "localhost"
+EUREKA_PORT: 5002
+EUREKA_USERNAME: "admin"
+EUREKA_PASSWORD: "letmein"
+
+SERVER_PORT: 8080
+UI_APP_URL: http://localhost:3000
