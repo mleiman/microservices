@@ -1,25 +1,25 @@
 plugins {
-    id 'java' // Common plugin applied to all subprojects
+	id 'java' // Common plugin applied to all subprojects
 }
 
 // Common configurations
 allprojects {
-    repositories {
-        mavenCentral()
-    }
+	repositories {
+		mavenCentral()
+	}
 }
 
 subprojects {
-    // Subprojects inherit this version
-    group = 'io.github.mleiman.microservices'
-    version = '0.0.1-SNAPSHOT'
+	// Subprojects inherit this version
+	group = 'io.github.mleiman.microservices'
+	version = '0.0.1-SNAPSHOT'
 
-    java {
-        toolchain {
-            languageVersion = JavaLanguageVersion.of(22)
-        }
-    }
-    // Apply Java plugin to all subprojects
-    apply plugin: 'java'
+	java {
+		toolchain {
+			languageVersion = JavaLanguageVersion.of(22)
+		}
+	}
+	// Apply Java plugin to all subprojects
+	apply plugin: 'java'
 }
 
