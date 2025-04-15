@@ -72,8 +72,7 @@ public class UserJwtGenerator implements OAuth2TokenGenerator<Jwt> {
 			if (registeredClient.getTokenSettings().getIdTokenSignatureAlgorithm() != null) {
 				jwsAlgorithm = registeredClient.getTokenSettings().getIdTokenSignatureAlgorithm();
 			}
-		}
-		else {
+		} else {
 			expiresAt = issuedAt.plus(registeredClient.getTokenSettings().getAccessTokenTimeToLive());
 		}
 
@@ -95,8 +94,7 @@ public class UserJwtGenerator implements OAuth2TokenGenerator<Jwt> {
 			if (!CollectionUtils.isEmpty(context.getAuthorizedScopes())) {
 				claimsBuilder.claim(OAuth2ParameterNames.SCOPE, context.getAuthorizedScopes());
 			}
-		}
-		else if (OidcParameterNames.ID_TOKEN.equals(context.getTokenType().getValue())) {
+		} else if (OidcParameterNames.ID_TOKEN.equals(context.getTokenType().getValue())) {
 			claimsBuilder.claim(IdTokenClaimNames.AZP, registeredClient.getClientId());
 			if (AuthorizationGrantType.AUTHORIZATION_CODE.equals(context.getAuthorizationGrantType())) {
 				OAuth2AuthorizationRequest authorizationRequest = context.getAuthorization().getAttribute(
@@ -110,8 +108,7 @@ public class UserJwtGenerator implements OAuth2TokenGenerator<Jwt> {
 					claimsBuilder.claim("sid", sessionInformation.getSessionId());
 					claimsBuilder.claim(IdTokenClaimNames.AUTH_TIME, sessionInformation.getLastRequest());
 				}
-			}
-			else if (AuthorizationGrantType.REFRESH_TOKEN.equals(context.getAuthorizationGrantType())) {
+			} else if (AuthorizationGrantType.REFRESH_TOKEN.equals(context.getAuthorizationGrantType())) {
 				OidcIdToken currentIdToken = context.getAuthorization().getToken(OidcIdToken.class).getToken();
 				if (currentIdToken.hasClaim("sid")) {
 					claimsBuilder.claim("sid", currentIdToken.getClaim("sid"));

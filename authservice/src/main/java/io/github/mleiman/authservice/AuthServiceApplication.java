@@ -31,7 +31,7 @@ public class AuthServiceApplication {
 	public ApplicationRunner runner(RegisteredClientRepository registeredClientRepository) {
 		return args -> {
 			RegisteredClient registeredClient = registeredClientRepository.findByClientId("client");
-			if ( registeredClient == null) {
+			if (registeredClient == null) {
 				registeredClient = RegisteredClient.withId(UUID.randomUUID().toString())
 						.clientId("client")
 						.clientSecret("sialababamak")

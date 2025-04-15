@@ -13,12 +13,12 @@ public class ClientRefreshTokenAuthenticationConverter implements Authentication
 	@Override
 	public Authentication convert(HttpServletRequest request) {
 		var grantType = request.getParameter(OAuth2ParameterNames.GRANT_TYPE);
-		if(AuthorizationGrantType.REFRESH_TOKEN.getValue().equalsIgnoreCase(grantType)) {
+		if (AuthorizationGrantType.REFRESH_TOKEN.getValue().equalsIgnoreCase(grantType)) {
 			return null;
 		}
 
 		var clientId = request.getParameter(OAuth2ParameterNames.CLIENT_ID);
-		if(StringUtils.isBlank(clientId)) {
+		if (StringUtils.isBlank(clientId)) {
 			return null;
 		}
 

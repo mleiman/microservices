@@ -1,6 +1,7 @@
 package io.github.mleiman.authservice.utils;
 
 import io.github.mleiman.authservice.model.User;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.oauth2.server.authorization.authentication.OAuth2AuthorizationCodeRequestAuthenticationToken;
@@ -12,5 +13,10 @@ public class UserUtils {
 			return (User) usernamePasswordAuthToken.getPrincipal();
 		}
 		return (User) authentication.getPrincipal();
+	}
+
+	public static boolean verifyCode(String secret, String code) {
+		// TODO: implement
+		return StringUtils.equals(secret, code);
 	}
 }

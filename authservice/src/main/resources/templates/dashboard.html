@@ -1,0 +1,591 @@
+<!doctype html>
+<html lang="en" class="bg-gray-100">
+<head>
+	<meta charset="utf-8">
+	<title>Cat Support | Ticket Management</title>
+	<base href="/">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/9732/9732800.png">
+	<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+<nav class="bg-gray-900 fixed w-full top-0 left-0 z-40">
+	<div class="container h-16 mx-auto navmenu">
+		<div class="relative h-16 flex items-center justify-between">
+			<div class="absolute inset-y-0 left-0 flex items-center lg:hidden">
+				<button type="button"
+						class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+						aria-controls="mobile-menu" aria-expanded="false">
+					<svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+						 aria-hidden="true">
+						<path stroke-linecap="round" stroke-linejoin="round"
+							  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+					</svg>
+					<svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+						 aria-hidden="true">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+					</svg>
+
+				</button>
+			</div>
+			<div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+				<div href="" class="flex-shrink-0 items-center hidden cursor-pointer lg:block">
+					<img class="h-8 w-auto" src="https://cdn-icons-png.flaticon.com/512/9732/9732800.png"
+						 alt="Ticket App">
+				</div>
+				<div class="hidden sm:ml-6 lg:block">
+					<div class="flex space-x-4">
+						<a href="" class="rounded-md px-3 py-2 text-sm font-medium text-white" aria-current="page">Dashboard</a>
+						<a href=""
+						   class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-gray-700">Tickets</a>
+						<a href=""
+						   class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-gray-700">Users</a>
+						<a href=""
+						   class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-gray-700">Reports</a>
+						<a href=""
+						   class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-gray-700 relative group">Messages
+							<span class="inline-flex items-center justify-center h-4 w-max px-[5px] py-[5px] text-xs font-semibold text-black bg-yellow-400 rounded-full">8</span>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="relative flex items-center usermenu">
+				<button type="button"
+						class="hover:bg-gray-700 relative bg-gray-800 p-1 text-white hover:text-white font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-3">
+					<svg class="w-4 h-4 mr-1.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+						 fill="currentColor" viewBox="0 0 16 16">
+						<path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3z"/>
+					</svg>
+					New Ticket
+				</button>
+				<button type="button"
+						class="flex items-center text-sm pe-1 font-medium text-white rounded-full md:me-0 focus:ring-1 focus:ring-gray-100">
+					<img class="w-8 h-8 me-2 rounded-full object-cover"
+						 src="https://images.unsplash.com/photo-1534528741775-53994a69daeb" alt="Junior"/>
+					Junior RT
+					<svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+						 viewBox="0 0 10 6">
+						<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+							  d="m1 1 4 4 4-4"/>
+					</svg>
+				</button>
+				<div class="invisible transition ease-in duration-75 transform opacity-0 scale-95 top-10 right-0 absolute z-10 text-gray-700 bg-white divide-y divide-gray-100 rounded-lg shadow min-w-max">
+					<div class="px-4 py-3 text-sm text-gray-700">
+						<div class="text-xs font-medium ">Signed in as:</div>
+						<div class="font-medium text-md">getarrayz@gmail.com</div>
+					</div>
+					<ul class="p-2 text-sm text-gray-700" aria-labelledby="dropdownHoverButton">
+						<li href=""
+							class="mb-3 pl-4 flex justify-start items-center cursor-pointer rounded-md hover:bg-gray-100">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+								 stroke="currentColor" class="size-5">
+								<path stroke-linecap="round" stroke-linejoin="round"
+									  d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"/>
+							</svg>
+							<div class="block px-4 py-2 text-gray-700" data-dropdown-trigger="click"
+								 data-dropdown-hide="usermenu">Profile
+							</div>
+						</li>
+						<li href="" fragment="password"
+							class="mb-3 pl-4 flex justify-start items-center cursor-pointer rounded-md hover:bg-gray-100">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+								 stroke="currentColor" class="size-5">
+								<path stroke-linecap="round" stroke-linejoin="round"
+									  d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"/>
+							</svg>
+							<div class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Password</div>
+						</li>
+						<li href="" fragment="settings"
+							class="mb-3 pl-4 flex justify-start items-center cursor-pointer rounded-md hover:bg-gray-100">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+								 stroke="currentColor" class="size-5">
+								<path stroke-linecap="round" stroke-linejoin="round"
+									  d="M4.5 12a7.5 7.5 0 0 0 15 0m-15 0a7.5 7.5 0 1 1 15 0m-15 0H3m16.5 0H21m-1.5 0H12m-8.457 3.077 1.41-.513m14.095-5.13 1.41-.513M5.106 17.785l1.15-.964m11.49-9.642 1.149-.964M7.501 19.795l.75-1.3m7.5-12.99.75-1.3m-6.063 16.658.26-1.477m2.605-14.772.26-1.477m0 17.726-.26-1.477M10.698 4.614l-.26-1.477M16.5 19.794l-.75-1.299M7.5 4.205 12 12m6.894 5.785-1.149-.964M6.256 7.178l-1.15-.964m15.352 8.864-1.41-.513M4.954 9.435l-1.41-.514M12.002 12l-3.75 6.495"/>
+							</svg>
+							<div class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Settings</div>
+						</li>
+						<div class="mt-3 mb-3 border-t border-gray-200"></div>
+						<li class="pl-4 flex justify-start items-center cursor-pointer rounded-md hover:bg-gray-100">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+								 stroke="currentColor" class="size-5">
+								<path stroke-linecap="round" stroke-linejoin="round"
+									  d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15m-3 0-3-3m0 0 3-3m-3 3H15"/>
+							</svg>
+							<div class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Logout</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="invisible transition ease-in duration-75 transform opacity-0 scale-95 bg-gray-900 rounded-b-md lg:hidden">
+			<div class="space-y-1 pb-3 pt-2">
+				<a href=""
+				   class="block rounded-md px-3 py-2 text-base font-medium text-white bg-gray-700 hover:bg-gray-700"
+				   aria-current="page">Dashboard</a>
+				<a href=""
+				   class="block rounded-md px-3 py-2 text-base font-medium text-white bg-gray-700 hover:bg-gray-700">Tickets</a>
+				<a href=""
+				   class="block rounded-md px-3 py-2 text-base font-medium text-white bg-gray-700 hover:bg-gray-700">Users</a>
+				<a href=""
+				   class="block rounded-md px-3 py-2 text-base font-medium text-white bg-gray-700 hover:bg-gray-700">Reports</a>
+				<a href=""
+				   class="block rounded-md px-3 py-2 text-base font-medium text-white bg-gray-700 hover:bg-gray-700">Messages
+					<span class="inline-flex items-center justify-center w-4 h-4 text-xs font-semibold text-black bg-yellow-300 rounded-full">{{store?.messages() | MessageCount}}</span>
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="loader">
+		<div class="loader__element absolute top-15"></div>
+	</div>
+</nav>
+<div class="mt-20">
+	<div class="container mx-auto">
+		<div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+			<div class="flex flex-col bg-blue-100 border shadow-sm rounded-xl">
+				<div class="p-4 md:p-5 flex justify-between gap-x-3">
+					<div>
+						<p class="text-xs uppercase tracking-wide text-gray-800 font-extrabold">
+							TOTAL TICKETS
+						</p>
+						<div class="mt-1 flex items-center gap-x-2">
+							<h3 class="text-xl sm:text-2xl font-extrabold text-gray-800">
+								8
+							</h3>
+						</div>
+					</div>
+					<div class="shrink-0 flex justify-center items-center size-[46px] bg-blue-600 text-white rounded-full">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+							 stroke="currentColor" class="size-6">
+							<path stroke-linecap="round" stroke-linejoin="round"
+								  d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125"/>
+						</svg>
+					</div>
+				</div>
+				<a routerLink="/reports"
+				   class="py-3 px-4 md:px-5 inline-flex justify-between items-center text-sm text-gray-600 border-t border-gray-400 hover:bg-blue-200 focus:outline-none focus:bg-blue-200 rounded-b-xl">
+					Go to report
+					<svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+						 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+						 stroke-linejoin="round">
+						<path d="m9 18 6-6-6-6"/>
+					</svg>
+				</a>
+			</div>
+			<div class="flex flex-col bg-green-100 border shadow-sm rounded-xl">
+				<div class="p-4 md:p-5 flex justify-between gap-x-3">
+					<div>
+						<p class="text-xs uppercase tracking-wide text-gray-800 font-extrabold">
+							COMPLETED
+						</p>
+						<div class="mt-1 flex items-center gap-x-2">
+							<h3 class="text-xl sm:text-2xl font-extrabold text-gray-800">
+								9
+							</h3>
+						</div>
+					</div>
+					<div class="shrink-0 flex justify-center items-center size-[46px] bg-green-600 text-white rounded-full">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+							 stroke="currentColor" class="size-6">
+							<path stroke-linecap="round" stroke-linejoin="round"
+								  d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z"/>
+						</svg>
+					</div>
+				</div>
+				<a routerLink="/reports"
+				   class="py-3 px-4 md:px-5 inline-flex justify-between items-center text-sm text-gray-600 border-t border-gray-400 hover:bg-green-200 focus:outline-none focus:bg-green-200 rounded-b-xl">
+					Go to report
+					<svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+						 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+						 stroke-linejoin="round">
+						<path d="m9 18 6-6-6-6"/>
+					</svg>
+				</a>
+			</div>
+			<div class="flex flex-col bg-cyan-100 border shadow-sm rounded-xl  ">
+				<div class="p-4 md:p-5 flex justify-between gap-x-3">
+					<div>
+						<p class="text-xs uppercase tracking-wide text-gray-800 font-extrabold">
+							IN PROGRESS
+						</p>
+						<div class="mt-1 flex items-center gap-x-2">
+							<h3 class="text-xl sm:text-2xl font-extrabold text-gray-800">
+								6
+							</h3>
+						</div>
+					</div>
+					<div
+							class="shrink-0 flex justify-center items-center size-[46px] bg-cyan-500 text-white rounded-full">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+							 stroke="currentColor" class="size-6">
+							<path stroke-linecap="round" stroke-linejoin="round"
+								  d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 0 0-3.7-3.7 48.678 48.678 0 0 0-7.324 0 4.006 4.006 0 0 0-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 0 0 3.7 3.7 48.656 48.656 0 0 0 7.324 0 4.006 4.006 0 0 0 3.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3-3 3"/>
+						</svg>
+					</div>
+				</div>
+				<a routerLink="/reports"
+				   class="py-3 px-4 md:px-5 inline-flex justify-between items-center text-sm text-gray-600 border-t border-gray-400 hover:bg-cyan-200 focus:outline-none focus:bg-cyan-200 rounded-b-xl">
+					Go to report
+					<svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+						 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+						 stroke-linejoin="round">
+						<path d="m9 18 6-6-6-6"/>
+					</svg>
+				</a>
+			</div>
+			<div class="flex flex-col bg-red-100 border shadow-sm rounded-xl  ">
+				<div class="p-4 md:p-5 flex justify-between gap-x-3">
+					<div>
+						<p class="text-xs uppercase tracking-wide text-gray-800 font-extrabold">
+							IMPEDED
+						</p>
+						<div class="mt-1 inline-flex items-center gap-x-2">
+							<h3 class="text-xl sm:text-2xl font-extrabold text-gray-800">
+								3
+							</h3>
+						</div>
+					</div>
+					<div class="shrink-0 flex justify-center items-center size-[46px] bg-red-500 text-white rounded-full">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+							 stroke="currentColor" class="size-6">
+							<path stroke-linecap="round" stroke-linejoin="round"
+								  d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z"/>
+						</svg>
+					</div>
+				</div>
+				<a routerLink="/reports"
+				   class="py-3 px-4 md:px-5 inline-flex justify-between items-center text-sm text-gray-600 border-t border-gray-400 hover:bg-red-200 focus:outline-none focus:bg-red-200 rounded-b-xl">
+					Go to report
+					<svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+						 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+						 stroke-linejoin="round">
+						<path d="m9 18 6-6-6-6"/>
+					</svg>
+				</a>
+			</div>
+		</div>
+		<div class="mt-7 grid grid-cols-1 gap-y-12 gap-x-6 lg:grid-cols-2">
+			<div class="rounded-xl bg-white border border-gray-200">
+				<div id="pieChart">
+					<apx-chart></apx-chart>
+				</div>
+				<div class="p-6 border-t border-blue-gray-50 px-6 py-5">
+					<div class="antialiased font-sans text-sm leading-normal flex items-center font-normal text-blue-gray-600">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+							 stroke="currentColor" class="size-6">
+							<path stroke-linecap="round" stroke-linejoin="round"
+								  d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z"/>
+						</svg>
+						&nbsp;Hover on each data slice for more details
+					</div>
+				</div>
+			</div>
+			<div class="relative flex flex-col bg-clip-border rounded-xl bg-white border border-blue-gray-100 shadow-sm">
+				<div class="relative bg-clip-border mx-4 rounded-xl overflow-hidden bg-white text-gray-700">
+					<div id="donutChart">
+						<apx-chart></apx-chart>
+					</div>
+				</div>
+				<div class="p-6 border-t border-blue-gray-50 px-6 py-5">
+					<div class="antialiased font-sans text-sm leading-normal flex items-center font-normal text-blue-gray-600">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+							 stroke="currentColor" class="size-6">
+							<path stroke-linecap="round" stroke-linejoin="round"
+								  d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z"/>
+						</svg>
+						&nbsp;Hover on each data slice for more details
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="mt-7 p-5 rounded-xl bg-white border border-gray-200">
+			<h6 class="text-base font-semibold text-blue-gray-900">
+				Ticket Trends Weekly
+			</h6>
+			<div id="linechart">
+				<apx-chart></apx-chart>
+			</div>
+		</div>
+		<div class="mt-7 grid grid-cols-1 gap-6 xl:grid-cols-3">
+			<div class=" flex flex-col bg-clip-border rounded-xl bg-white overflow-hidden xl:col-span-2 border border-blue-gray-100 shadow-sm">
+				<div class=" bg-clip-border rounded-xl overflow-hidden bg-transparent shadow-none m-0 flex items-center justify-between p-6">
+					<h6 class="text-base font-semibold text-blue-gray-900">
+						Ticket by Status
+					</h6>
+				</div>
+				<div class="p-6 pb-2">
+					<div id="columnChart">
+						<apx-chart></apx-chart>
+					</div>
+				</div>
+			</div>
+			<div class="flex flex-col rounded-xl bg-white p-6 text-gray-700 border border-blue-gray-100">
+				<div class="rounded-xl text-gray-700">
+					<h6 class="text-base font-semibold text-blue-gray-900">
+						Oldest Open Tickets
+					</h6>
+					<div class="mx-auto mt-2 mb-2 border-t border-gray-200"></div>
+				</div>
+				<div class="w-full">
+					<div class="flex items-center justify-between mb-1.5 py-2 px-1.5 border border-gray-300 rounded-md cursor-pointer">
+						<div class="flex items-start gap-1">
+							<div class="bg-gray-300 p-1 rounded-full text-[#0a365e]">
+								<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+									 stroke-width="1.5"
+									 stroke="currentColor" class="size-6">
+									<path stroke-linecap="round" stroke-linejoin="round"
+										  d="M16.5 6v.75m0 3v.75m0 3v.75m0 3V18m-9-5.25h5.25M7.5 15h3M3.375 5.25c-.621 0-1.125.504-1.125 1.125v3.026a2.999 2.999 0 0 1 0 5.198v3.026c0 .621.504 1.125 1.125 1.125h17.25c.621 0 1.125-.504 1.125-1.125v-3.026a2.999 2.999 0 0 1 0-5.198V6.375c0-.621-.504-1.125-1.125-1.125H3.375Z"/>
+								</svg>
+							</div>
+							<div>
+								<p class="antialiased font-sans text-sm leading-normal text-blue-gray-900 font-medium">
+									Ticket #SADFHBISDUB
+								</p>
+								<span class="block antialiased font-sans text-xs font-medium text-blue-gray-500">
+                           Since Jan 4th 2025
+                           </span>
+							</div>
+						</div>
+						<span class="bg-green-400 px-1 py-0.5 text-[10px] align-middle text-white font-bold rounded-md">
+                     COMPLETED
+                     </span>
+					</div>
+					<div class="flex items-center justify-between mb-1.5 py-2 px-1.5 border border-gray-300 rounded-md cursor-pointer">
+						<div class="flex items-start gap-1">
+							<div class="bg-gray-300 p-1 rounded-full text-[#0a365e]">
+								<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+									 stroke-width="1.5"
+									 stroke="currentColor" class="size-6">
+									<path stroke-linecap="round" stroke-linejoin="round"
+										  d="M16.5 6v.75m0 3v.75m0 3v.75m0 3V18m-9-5.25h5.25M7.5 15h3M3.375 5.25c-.621 0-1.125.504-1.125 1.125v3.026a2.999 2.999 0 0 1 0 5.198v3.026c0 .621.504 1.125 1.125 1.125h17.25c.621 0 1.125-.504 1.125-1.125v-3.026a2.999 2.999 0 0 1 0-5.198V6.375c0-.621-.504-1.125-1.125-1.125H3.375Z"/>
+								</svg>
+							</div>
+							<div>
+								<p class="antialiased font-sans text-sm leading-normal text-blue-gray-900 font-medium">
+									Ticket #SADFHBISDUB
+								</p>
+								<span class="block antialiased font-sans text-xs font-medium text-blue-gray-500">
+                           Since Jan 4th 2025
+                           </span>
+							</div>
+						</div>
+						<span class="bg-green-400 px-1 py-0.5 text-[10px] align-middle text-white font-bold rounded-md">
+                     COMPLETED
+                     </span>
+					</div>
+					<div class="flex items-center justify-between mb-1.5 py-2 px-1.5 border border-gray-300 rounded-md cursor-pointer">
+						<div class="flex items-start gap-1">
+							<div class="bg-gray-300 p-1 rounded-full text-[#0a365e]">
+								<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+									 stroke-width="1.5"
+									 stroke="currentColor" class="size-6">
+									<path stroke-linecap="round" stroke-linejoin="round"
+										  d="M16.5 6v.75m0 3v.75m0 3v.75m0 3V18m-9-5.25h5.25M7.5 15h3M3.375 5.25c-.621 0-1.125.504-1.125 1.125v3.026a2.999 2.999 0 0 1 0 5.198v3.026c0 .621.504 1.125 1.125 1.125h17.25c.621 0 1.125-.504 1.125-1.125v-3.026a2.999 2.999 0 0 1 0-5.198V6.375c0-.621-.504-1.125-1.125-1.125H3.375Z"/>
+								</svg>
+							</div>
+							<div>
+								<p class="antialiased font-sans text-sm leading-normal text-blue-gray-900 font-medium">
+									Ticket #SADFHBISDUB
+								</p>
+								<span class="block antialiased font-sans text-xs font-medium text-blue-gray-500">
+                           Since Jan 4th 2025
+                           </span>
+							</div>
+						</div>
+						<span class="bg-green-400 px-1 py-0.5 text-[10px] align-middle text-white font-bold rounded-md">
+                     COMPLETED
+                     </span>
+					</div>
+					<div class="flex items-center justify-between mb-1.5 py-2 px-1.5 border border-gray-300 rounded-md cursor-pointer">
+						<div class="flex items-start gap-1">
+							<div class="bg-gray-300 p-1 rounded-full text-[#0a365e]">
+								<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+									 stroke-width="1.5"
+									 stroke="currentColor" class="size-6">
+									<path stroke-linecap="round" stroke-linejoin="round"
+										  d="M16.5 6v.75m0 3v.75m0 3v.75m0 3V18m-9-5.25h5.25M7.5 15h3M3.375 5.25c-.621 0-1.125.504-1.125 1.125v3.026a2.999 2.999 0 0 1 0 5.198v3.026c0 .621.504 1.125 1.125 1.125h17.25c.621 0 1.125-.504 1.125-1.125v-3.026a2.999 2.999 0 0 1 0-5.198V6.375c0-.621-.504-1.125-1.125-1.125H3.375Z"/>
+								</svg>
+							</div>
+							<div>
+								<p class="antialiased font-sans text-sm leading-normal text-blue-gray-900 font-medium">
+									Ticket #SADFHBISDUB
+								</p>
+								<span class="block antialiased font-sans text-xs font-medium text-blue-gray-500">
+                           Since Jan 4th 2025
+                           </span>
+							</div>
+						</div>
+						<span class="bg-green-400 px-1 py-0.5 text-[10px] align-middle text-white font-bold rounded-md">
+                     COMPLETED
+                     </span>
+					</div>
+					<div class="flex items-center justify-between mb-1.5 py-2 px-1.5 border border-gray-300 rounded-md cursor-pointer">
+						<div class="flex items-start gap-1">
+							<div class="bg-gray-300 p-1 rounded-full text-[#0a365e]">
+								<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+									 stroke-width="1.5"
+									 stroke="currentColor" class="size-6">
+									<path stroke-linecap="round" stroke-linejoin="round"
+										  d="M16.5 6v.75m0 3v.75m0 3v.75m0 3V18m-9-5.25h5.25M7.5 15h3M3.375 5.25c-.621 0-1.125.504-1.125 1.125v3.026a2.999 2.999 0 0 1 0 5.198v3.026c0 .621.504 1.125 1.125 1.125h17.25c.621 0 1.125-.504 1.125-1.125v-3.026a2.999 2.999 0 0 1 0-5.198V6.375c0-.621-.504-1.125-1.125-1.125H3.375Z"/>
+								</svg>
+							</div>
+							<div>
+								<p class="antialiased font-sans text-sm leading-normal text-blue-gray-900 font-medium">
+									Ticket #SADFHBISDUB
+								</p>
+								<span class="block antialiased font-sans text-xs font-medium text-blue-gray-500">
+                           Since Jan 4th 2025
+                           </span>
+							</div>
+						</div>
+						<span class="bg-green-400 px-1 py-0.5 text-[10px] align-middle text-white font-bold rounded-md">
+                     COMPLETED
+                     </span>
+					</div>
+					<div class="flex items-center justify-between mb-1.5 py-2 px-1.5 border border-gray-300 rounded-md cursor-pointer">
+						<div class="flex items-start gap-1">
+							<div class="bg-gray-300 p-1 rounded-full text-[#0a365e]">
+								<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+									 stroke-width="1.5"
+									 stroke="currentColor" class="size-6">
+									<path stroke-linecap="round" stroke-linejoin="round"
+										  d="M16.5 6v.75m0 3v.75m0 3v.75m0 3V18m-9-5.25h5.25M7.5 15h3M3.375 5.25c-.621 0-1.125.504-1.125 1.125v3.026a2.999 2.999 0 0 1 0 5.198v3.026c0 .621.504 1.125 1.125 1.125h17.25c.621 0 1.125-.504 1.125-1.125v-3.026a2.999 2.999 0 0 1 0-5.198V6.375c0-.621-.504-1.125-1.125-1.125H3.375Z"/>
+								</svg>
+							</div>
+							<div>
+								<p class="antialiased font-sans text-sm leading-normal text-blue-gray-900 font-medium">
+									Ticket #SADFHBISDUB
+								</p>
+								<span class="block antialiased font-sans text-xs font-medium text-blue-gray-500">
+                           Since Jan 4th 2025
+                           </span>
+							</div>
+						</div>
+						<span class="bg-green-400 px-1 py-0.5 text-[10px] align-middle text-white font-bold rounded-md">
+                     COMPLETED
+                     </span>
+					</div>
+					<div class="flex items-center justify-between mb-1.5 py-2 px-1.5 border border-gray-300 rounded-md cursor-pointer">
+						<div class="flex items-start gap-1">
+							<div class="bg-gray-300 p-1 rounded-full text-[#0a365e]">
+								<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+									 stroke-width="1.5"
+									 stroke="currentColor" class="size-6">
+									<path stroke-linecap="round" stroke-linejoin="round"
+										  d="M16.5 6v.75m0 3v.75m0 3v.75m0 3V18m-9-5.25h5.25M7.5 15h3M3.375 5.25c-.621 0-1.125.504-1.125 1.125v3.026a2.999 2.999 0 0 1 0 5.198v3.026c0 .621.504 1.125 1.125 1.125h17.25c.621 0 1.125-.504 1.125-1.125v-3.026a2.999 2.999 0 0 1 0-5.198V6.375c0-.621-.504-1.125-1.125-1.125H3.375Z"/>
+								</svg>
+							</div>
+							<div>
+								<p class="antialiased font-sans text-sm leading-normal text-blue-gray-900 font-medium">
+									Ticket #SADFHBISDUB
+								</p>
+								<span class="block antialiased font-sans text-xs font-medium text-blue-gray-500">
+                           Since Jan 4th 2025
+                           </span>
+							</div>
+						</div>
+						<span class="bg-green-400 px-1 py-0.5 text-[10px] align-middle text-white font-bold rounded-md">
+                     COMPLETED
+                     </span>
+					</div>
+					<div class="flex items-center justify-between mb-1.5 py-2 px-1.5 border border-gray-300 rounded-md cursor-pointer">
+						<div class="flex items-start gap-1">
+							<div class="bg-gray-300 p-1 rounded-full text-[#0a365e]">
+								<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+									 stroke-width="1.5"
+									 stroke="currentColor" class="size-6">
+									<path stroke-linecap="round" stroke-linejoin="round"
+										  d="M16.5 6v.75m0 3v.75m0 3v.75m0 3V18m-9-5.25h5.25M7.5 15h3M3.375 5.25c-.621 0-1.125.504-1.125 1.125v3.026a2.999 2.999 0 0 1 0 5.198v3.026c0 .621.504 1.125 1.125 1.125h17.25c.621 0 1.125-.504 1.125-1.125v-3.026a2.999 2.999 0 0 1 0-5.198V6.375c0-.621-.504-1.125-1.125-1.125H3.375Z"/>
+								</svg>
+							</div>
+							<div>
+								<p class="antialiased font-sans text-sm leading-normal text-blue-gray-900 font-medium">
+									Ticket #SADFHBISDUB
+								</p>
+								<span class="block antialiased font-sans text-xs font-medium text-blue-gray-500">
+                           Since Jan 4th 2025
+                           </span>
+							</div>
+						</div>
+						<span class="bg-green-400 px-1 py-0.5 text-[10px] align-middle text-white font-bold rounded-md">
+                     COMPLETED
+                     </span>
+					</div>
+					<div class="flex items-center justify-between mb-1.5 py-2 px-1.5 border border-gray-300 rounded-md cursor-pointer">
+						<div class="flex items-start gap-1">
+							<div class="bg-gray-300 p-1 rounded-full text-[#0a365e]">
+								<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+									 stroke-width="1.5"
+									 stroke="currentColor" class="size-6">
+									<path stroke-linecap="round" stroke-linejoin="round"
+										  d="M16.5 6v.75m0 3v.75m0 3v.75m0 3V18m-9-5.25h5.25M7.5 15h3M3.375 5.25c-.621 0-1.125.504-1.125 1.125v3.026a2.999 2.999 0 0 1 0 5.198v3.026c0 .621.504 1.125 1.125 1.125h17.25c.621 0 1.125-.504 1.125-1.125v-3.026a2.999 2.999 0 0 1 0-5.198V6.375c0-.621-.504-1.125-1.125-1.125H3.375Z"/>
+								</svg>
+							</div>
+							<div>
+								<p class="antialiased font-sans text-sm leading-normal text-blue-gray-900 font-medium">
+									Ticket #SADFHBISDUB
+								</p>
+								<span class="block antialiased font-sans text-xs font-medium text-blue-gray-500">
+                           Since Jan 4th 2025
+                           </span>
+							</div>
+						</div>
+						<span class="bg-green-400 px-1 py-0.5 text-[10px] align-middle text-white font-bold rounded-md">
+                     COMPLETED
+                     </span>
+					</div>
+					<div class="flex items-center justify-between mb-1.5 py-2 px-1.5 border border-gray-300 rounded-md cursor-pointer">
+						<div class="flex items-start gap-1">
+							<div class="bg-gray-300 p-1 rounded-full text-[#0a365e]">
+								<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+									 stroke-width="1.5"
+									 stroke="currentColor" class="size-6">
+									<path stroke-linecap="round" stroke-linejoin="round"
+										  d="M16.5 6v.75m0 3v.75m0 3v.75m0 3V18m-9-5.25h5.25M7.5 15h3M3.375 5.25c-.621 0-1.125.504-1.125 1.125v3.026a2.999 2.999 0 0 1 0 5.198v3.026c0 .621.504 1.125 1.125 1.125h17.25c.621 0 1.125-.504 1.125-1.125v-3.026a2.999 2.999 0 0 1 0-5.198V6.375c0-.621-.504-1.125-1.125-1.125H3.375Z"/>
+								</svg>
+							</div>
+							<div>
+								<p class="antialiased font-sans text-sm leading-normal text-blue-gray-900 font-medium">
+									Ticket #SADFHBISDUB
+								</p>
+								<span class="block antialiased font-sans text-xs font-medium text-blue-gray-500">
+                           Since Jan 4th 2025
+                           </span>
+							</div>
+						</div>
+						<span class="bg-green-400 px-1 py-0.5 text-[10px] align-middle text-white font-bold rounded-md">
+                     COMPLETED
+                     </span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container mx-auto">
+	<div class="text-blue-gray-600 border-t border-gray-200 mt-6">
+		<footer class="py-2">
+			<div class="flex w-full flex-wrap items-center justify-center gap-6 px-2 md:justify-between">
+				<p class="block antialiased font-sans text-sm leading-normal font-normal text-inherit">
+					&#169; 2025
+					<a class="transition-colors hover:text-blue-500 font-bold" href="https://www.getarrays.io"
+					   target="_blank">Get Arrays, LLC.</a>
+				</p>
+				<ul class="flex items-center gap-4">
+					<li><a href="#" target="_blank"
+						   class="block antialiased font-sans text-sm leading-normal py-0.5 px-1 font-normal text-inherit transition-colors hover:text-blue-500">About
+						Us</a>
+					</li>
+					<li><a href="#" target="_blank"
+						   class="block antialiased font-sans text-sm leading-normal py-0.5 px-1 font-normal text-inherit transition-colors hover:text-blue-500">Blog</a>
+					</li>
+					<li><a href="#" target="_blank"
+						   class="block antialiased font-sans text-sm leading-normal py-0.5 px-1 font-normal text-inherit transition-colors hover:text-blue-500">License</a>
+					</li>
+				</ul>
+			</div>
+		</footer>
+	</div>
+</div>
+</body>
+</html>

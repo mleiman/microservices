@@ -41,7 +41,7 @@ public class KeyUtils {
 		KeyPair keyPair;
 		var keysDir = Paths.get("src", "main", "resources", "keys");
 		verifyKeysDir(keysDir);
-		if(Files.exists(keysDir.resolve(privateKey)) && Files.exists(keysDir.resolve(publicKey))) {
+		if (Files.exists(keysDir.resolve(privateKey)) && Files.exists(keysDir.resolve(publicKey))) {
 			log.info("RSA keys already exists. Loading keys from file system: \n* {} \n* {}", privateKey, publicKey);
 			var privateKeyFile = keysDir.resolve(privateKey).toFile();
 			var publicKeyFile = keysDir.resolve(publicKey).toFile();
