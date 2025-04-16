@@ -24,7 +24,7 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public void updateLoginAttempts(String email) {
+	public void incrementLoginAttempts(String email) {
 		userRepository.incrementLoginAttempts(email);
 	}
 

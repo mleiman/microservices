@@ -21,7 +21,7 @@ public interface UserRepository extends JpaRepository<User, String> {
 
 	@Modifying
 	@Transactional
-	@Query("UPDATE User u SET u.loginAttempts = u.loginAttempts + 1 WHERE u.uuid = :uuid")
+	@Query("UPDATE User u SET u.loginAttempts = u.loginAttempts + 1 WHERE u.email = :email")
 	void incrementLoginAttempts(String email);
 
 	@Modifying
